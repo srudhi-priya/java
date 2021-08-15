@@ -1,24 +1,25 @@
-import java.io.*;
-import java.util.Scanner;
+import java.util.Scanner;  
+public class MaximumNumbers 
+{  
+public static void main(String[] args)   
+{  
+int i,n;  
+Scanner sc=new Scanner(System.in);  
+System.out.print("Enter the number of elements: ");  
+n=sc.nextInt();  
+int[] array = new int[100];  
+System.out.println("Enter the elements of the array: ");  
+for(i=0; i<n; i++)  
+{  
+  array[i]=sc.nextInt();  
+}
+  int max=array[0];
 
-public class MaximumNumbers {
-    public static void main(String[] args) {
-			int i,n=25;
-			Scanner sc=new Scanner(System.in);
-			n=sc.nextInt();
-			int arr[]=new int[100];  
-			for(i=0;i<n;i++)
-					{
-					arr[i]=sc.nextInt();	
-					}
-			   int max = arr[0];
-			        for (i = 0; i < n; i++){
-			            if (arr[i] > max)
-			                max = arr[i];
-			       
-				}
-			System.out.println(max);
-			}
-			
-
-		}
+  for(int i=0;i<n;i++)
+  {
+    if(array[i]>max)
+      max=array[i];
+  }
+  System.out.println("Largest element present in the array:"+max);
+}
+}
